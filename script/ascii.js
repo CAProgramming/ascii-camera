@@ -15,7 +15,8 @@ var ascii = (function() {
 
 		// calculate contrast factor
 		// http://www.dfstudios.co.uk/articles/image-processing-algorithms-part-5/
-		var contrastFactor = (259 * (options.contrast + 255)) / (255 * (259 - options.contrast));
+		//var contrastFactor = (259 * (options.contrast + 255)) / (255 * (259 - options.contrast));
+		var contrastFactor = 255;
 
 		var imageData = context.getImageData(0, 0, canvasWidth, canvasHeight);
 		for (var y = 0; y < canvasHeight; y += 2) { // every other row because letters are not square
